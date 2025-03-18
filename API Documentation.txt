@@ -1,0 +1,65 @@
+API Documentation  
+
+1. Predict Match Winner  
+API: /predict_win  
+Method: POST  
+
+REQUEST:  
+{
+    "venue": "Wankhede Stadium",
+    "toss_winner": "Mumbai Indians",
+    "toss_decision": "bat",
+    "team1": "Mumbai Indians",
+    "team2": "Chennai Super Kings"
+}  
+
+RESPONSE:  
+{
+    "win_probability": 0.78
+}  
+
+Best Model Used: XGBoost (Accuracy: 85%)  
+
+---
+
+2. Predict First Innings Score  
+API: /predict_score  
+Method: POST  
+
+REQUEST:  
+{
+    "venue": "Wankhede Stadium",
+    "toss_winner": "Mumbai Indians",
+    "toss_decision": "bat",
+    "team1": "Mumbai Indians",
+    "team2": "Chennai Super Kings"
+}  
+
+RESPONSE:  
+{
+    "predicted_score": 180
+}  
+
+Best Model Used: Random Forest Regressor (MAE: 12.5)  
+
+---
+
+3. Predict Powerplay Wickets Lost  
+API: /predict_wickets  
+Method: POST  
+
+REQUEST:  
+{
+    "venue": "Wankhede Stadium",
+    "toss_winner": "Mumbai Indians",
+    "toss_decision": "bat",
+    "team1": "Mumbai Indians",
+    "team2": "Chennai Super Kings"
+}  
+
+RESPONSE:  
+{
+    "predicted_wickets": 2
+}  
+
+Best Model Used: XGBoost Regressor (MAE: 0.8)  
